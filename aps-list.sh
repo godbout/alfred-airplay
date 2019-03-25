@@ -1,16 +1,19 @@
 #!/bin/bash
 
-read -d '' APPLESCRIPT <<EOF
+apDevices=()
 
-tell application "iTunes"	
-	set apDevices to (get name of AirPlay devices whose kind is Apple TV)
-end tell
+i=0
+while read -r line; do
+    i=`expr $i + 1`
+    if [ $i -lt 5 ]; then continue; fi # skip the header lines
+        room=$( echo $line | cut -d ' ' -f 7-100 )
+				apDevices+=("$room")
 
-return apDevices
-
-EOF
-
-apDevices=$(osascript -e "$APPLESCRIPT")
+    # break if no more items will follow (e.g. Flags != 3)
+    if [ $(echo $line | cut -d ' ' -f 3) -ne '3' ]; then
+        break
+    fi
+done < <(dns-sd -B _airplay._tcp)
 
 cat << EOB
 
@@ -20,7 +23,7 @@ EOB
 
 IFS=","
 
-for f in ${apDevices}; do
+for f in ${apDevices[@]}; do
 
 	item=${f#"${f%%[![:space:]]*}"}
 
