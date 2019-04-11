@@ -20,7 +20,11 @@ EOF
 found=$(osascript -e "$APPLESCRIPT")
 
 if [[ "$1" = "Turn AirPlay Off" ]]; then
-    echo "Display not shared anymore";
+    if [[ "$found" = true ]]; then
+        echo "Display not shared anymore";
+    else
+        echo "Cannot stop sharing display";
+    fi
 elif [ "$found" = true ]; then
     echo "Display now shared with \"$1\"";
 else
