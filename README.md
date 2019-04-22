@@ -15,10 +15,13 @@ Rather than clicking in the menu and choosing your display and blah blah blah, j
 
 ![Beautiful Screenshot](https://github.com/godbout/alfred-airplay/blob/master/resources/screenshots/usage.gif "Beautiful Screenshot")
 
-
 # SETUP
 
 SETUP NO MORE! AirPlay Spreader now detects your AirPlay video servers automatically.
+
+# ISSUE WITH BARTENDER
+
+If you're using Bartender, hide the *AirPlay Displays* item and extend your display, you will not be able to Turn it Off from the Workflow. The current workaround is to *Show* or *Always Show* the *AirPlay Displays* item in Bartender. If you're mirroring your display then you don't need to do anything, it just works.
 
 # DOWNLOAD
 
