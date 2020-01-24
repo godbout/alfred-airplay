@@ -53,6 +53,21 @@ EOB
 
 done
 
+if [[ $(sw_vers -productVersion | cut -d '.' -f 1,2) > 10.14 ]]; then
+
+cat << EOB
+        {
+            "type": "file",
+            "title": "Stop AirPlay",
+            "subtitle": "Stop AirPlay",
+            "arg": "Stop AirPlay",
+            "autocomplete": "Stop AirPlay",
+        }
+    ]}
+EOB
+
+else
+
 cat << EOB
         {
             "type": "file",
@@ -63,5 +78,7 @@ cat << EOB
         }
     ]}
 EOB
+
+fi
 
 fi

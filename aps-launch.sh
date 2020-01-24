@@ -5,6 +5,8 @@ set found to false
 tell application "System Events"
     tell process "SystemUIServer"
         click (menu bar item 1 of menu bar 1 whose description contains "Displays")
+        delay 0.1
+        click (menu bar item 1 of menu bar 1 whose description contains "Displays")
         try
             click menu item "$1" of menu 1 of result
             set found to true
@@ -19,7 +21,7 @@ EOF
 
 found=$(osascript -e "$APPLESCRIPT")
 
-if [[ "$1" = "Turn AirPlay Off" ]]; then
+if [[ "$1" = "Turn AirPlay Off" || "$1" = "Stop AirPlay" ]]; then
     if [[ "$found" = true ]]; then
         echo "Display not shared anymore";
     else
