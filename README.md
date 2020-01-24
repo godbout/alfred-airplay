@@ -1,7 +1,7 @@
 <h1 align="center">Alfred AirPlay</h1>
 
 <p align="center">
-<a href="https://github.com/godbout/alfred-airplay/releases/tag/1.0.0"><img src="https://img.shields.io/github/release/godbout/alfred-airplay.svg?style=flat" alt="GitHub Release"></a>
+<a href="https://github.com/godbout/alfred-airplay/releases/latest"><img src="https://img.shields.io/github/release/godbout/alfred-airplay.svg?style=flat" alt="GitHub Release"></a>
 <a href="https://github.com/godbout/alfred-airplay/releases"><img src="https://img.shields.io/github/downloads/godbout/alfred-airplay/total.svg?style=flat" alt="GitHub Downloads"></a>
 </p>
 
