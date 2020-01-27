@@ -4,15 +4,16 @@ read -d '' APPLESCRIPT <<EOF
 set found to false
 tell application "System Events"
     tell process "SystemUIServer"
-        click (menu bar item 1 of menu bar 1 whose description contains "Displays")
+        set airplayMenuItem to click (menu bar item 1 of menu bar 1 whose description contains "Displays")
         delay 0.1
-        click (menu bar item 1 of menu bar 1 whose description contains "Displays")
         try
-            click menu item "$1" of menu 1 of result
+            click menu item "$1" of menu 1 of airplayMenuItem
             set found to true
             delay 1
         on error
-            key code 53
+            if ("$1" is not equal to "Go AirPlay Menu") then
+                key code 53
+            end if
         end try
     end tell
 end tell
@@ -29,6 +30,6 @@ if [[ "$1" = "Turn AirPlay Off" || "$1" = "Stop AirPlay" ]]; then
     fi
 elif [ "$found" = true ]; then
     echo "Display will now be shared with \"$1\"";
-else
+elif [ "$1" != "Go Airplay Menu"]; then
     echo "Cannot find \"$1\" display";
 fi
