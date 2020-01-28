@@ -9,7 +9,9 @@
 
 # WHAT IS THAT
 
-Rather than clicking in the menu and choosing your display and blah blah blah, just open [Alfred](https://www.alfredapp.com/), type "aps", choose your display and KABOOM!!! Your display is extended to your AirPlay device.
+Rather than clicking the menu bar and and choosing your display and blah blah blah, just open [Alfred](https://www.alfredapp.com/), type *aps*, choose your display and KABOOM!!! Your display is extended to your AirPlay device.
+
+P.S. You can now access your [Sidecar](https://support.apple.com/en-us/HT210380) devices easily with the new *Go to AirPlay Menu* option. 😎️
 
 # MANDATORY SCREENSHOT
 
@@ -17,7 +19,7 @@ Rather than clicking in the menu and choosing your display and blah blah blah, j
 
 # SETUP
 
-SETUP NO MORE! AirPlay Spreader now detects your AirPlay video servers automatically.
+SETUP NO MORE! AirPlay Spreader now detects your AirPlay video servers automatically. (Only if connected to the same Wi-Fi network though.)
 
 # ISSUE WITH BARTENDER
 
