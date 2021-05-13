@@ -7,6 +7,10 @@
 
 ---
 
+# BIG SUR NO NO
+
+Sorry, this Workflow will work up to Catalina only. Apple made big changes to the menu bar system with Big Sur, and basically another script would have to be written (and researched properly) to make it work with it. Free free to fork or PR or cry hard.
+
 # WHAT IS THAT
 
 Rather than clicking the menu bar and and choosing your display and blah blah blah, just open [Alfred](https://www.alfredapp.com/), type *aps*, choose your display and KABOOM!!! Your display is extended to your AirPlay device.
